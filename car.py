@@ -1,10 +1,25 @@
-from abc import ABC, abstractmethod
+from serviceable_interface import Serviceable
 
 
-class Car(ABC):
-    def __init__(self, last_service_date):
-        self.last_service_date = last_service_date
+class Car(Serviceable):
+    """Represents a car object that can be serviced."""
 
-    @abstractmethod
-    def needs_service(self):
+    def __init__(self, engine, battery):
+        """
+        Initialize a Car object.
+
+        Args:
+            engine: The engine of the car.
+            battery: The battery of the car.
+        """
+        self.engine = engine
+        self.battery = battery
+
+    def needs_service(self) -> bool:
+        """
+        Determines if the car needs servicing.
+
+        Returns:
+            bool: True if the car needs servicing, False otherwise.
+        """
         pass
