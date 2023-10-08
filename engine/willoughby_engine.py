@@ -10,6 +10,7 @@ class WilloughbyEngine(Engine):
         last_service_mileage (int): The mileage when the engine was last
             serviced.
     """
+    SERVICE_LIMIT_MILEAGE = 60000
 
     def __init__(self, current_mileage: int, last_service_mileage: int):
         """
@@ -30,4 +31,5 @@ class WilloughbyEngine(Engine):
         Returns:
             bool: True if the engine should be serviced, False otherwise.
         """
-        return self.current_mileage - self.last_service_mileage > 60000
+        return (self.current_mileage - self.last_service_mileage
+                > WilloughbyEngine.SERVICE_LIMIT_MILEAGE)

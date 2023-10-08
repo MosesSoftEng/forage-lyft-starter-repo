@@ -10,6 +10,7 @@ class CapuletEngine(Engine):
         last_service_mileage (int): The mileage when the engine was last
             serviced.
     """
+    SERVICE_LIMIT_MILEAGE = 30000
 
     def __init__(self, current_mileage: int, last_service_mileage: int):
         """
@@ -30,4 +31,5 @@ class CapuletEngine(Engine):
         Returns:
             bool: True if the engine needs servicing, False otherwise.
         """
-        return self.current_mileage - self.last_service_mileage > 30000
+        return (self.current_mileage - self.last_service_mileage >
+                CapuletEngine.SERVICE_LIMIT_MILEAGE)
