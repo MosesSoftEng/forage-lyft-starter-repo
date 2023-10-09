@@ -22,4 +22,4 @@ class Car(Serviceable):
         Returns:
             bool: True if the car needs servicing, False otherwise.
         """
-        pass
+        return self.engine.needs_service() or self.battery.needs_service()
