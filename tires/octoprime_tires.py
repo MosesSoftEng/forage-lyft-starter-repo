@@ -1,5 +1,6 @@
-from tires.tires_interface import Tires
 from typing import List
+
+from tires.tires_interface import Tires
 
 
 class OctoprimeTires(Tires):
@@ -7,17 +8,17 @@ class OctoprimeTires(Tires):
     Represents a Octoprime tires that implements the Tires interface.
 
     Args:
-        tires (List[float]): List of tires wear.
+        tires_wear (List[float]): List of tires wear.
     """
 
-    def __init__(self, tires: List[float]) -> None:
+    def __init__(self, tires_wear: List[float]) -> None:
         """
         Initialize a OctoprimeTires object.
 
         Args:
             tires (List[float]): List of tires wear.
         """
-        self.tires:List[float] = tires
+        self.tires_wear: List[float] = tires_wear
 
     def needs_service(self) -> bool:
         """
@@ -26,4 +27,4 @@ class OctoprimeTires(Tires):
         Returns:
             bool: True if the octoprime tires needs servicing, False otherwise.
         """
-        return sum(self.tires) >= 3
+        return sum(self.tires_wear) >= 3

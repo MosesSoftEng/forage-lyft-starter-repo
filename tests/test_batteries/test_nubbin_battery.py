@@ -1,7 +1,7 @@
 import unittest
 from datetime import date
 
-from battery.nubbin_battery import NubbinBattery
+from batteries.nubbin_battery import NubbinBattery
 
 
 class TestNubbinBattery(unittest.TestCase):
