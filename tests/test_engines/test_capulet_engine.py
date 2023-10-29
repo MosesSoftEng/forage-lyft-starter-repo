@@ -34,7 +34,7 @@ class TestCapuletEngine(unittest.TestCase):
         engine: CapuletEngine = CapuletEngine(
             current_mileage, last_service_mileage
         )
-        
+
         self.assertFalse(engine.needs_service())
 
 
