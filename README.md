@@ -4,14 +4,24 @@ A software to help manage servicing of cars at Lyft.
 
 # Technologies and Frameworks.
 
-1. Python programming language, annotations in Python.
+1. Python programming language, typing in Python, OOP python and Python modules.
 1. Test Driven Development (TDD), Unit testing.
 1. Python virtual environment.
 1. Linting; autopep8, pycodestyle.
+1. UML diagrams using draw.io.
+1. Version control using Git and Github.
 
 # Design patterns.
 
-Factory creational design pattern.
+Below are the design patterns used for the project.
+
+## Factory creational design pattern.
+
+Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+
+## Strategy behavioral design pattern.
+
+Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
 
 # Linting.
 
@@ -46,6 +56,7 @@ autopep8 --in-place --recursive .
 ```
 
 # Typing/ Annotations using mypy.
+
 ```bash
 # Check typing for a file.
 mypy <PYTHON_FILE>
@@ -57,7 +68,6 @@ mypy tests
 # Check typing for all files.
 mypy .
 ```
-
 
 # Test Driven Development.
 
@@ -147,10 +157,9 @@ autopep8 --in-place --recursive .
 
 [https://pypi.org/project/pycodestyle/](https://pypi.org/project/pycodestyle/)
 
-
 ## mypy.
 
-A toold to check type annotations for Python programs.
+A tool to check type annotations for Python programs.
 
 ```bash
 # Install pycodestyle.
@@ -161,9 +170,22 @@ mypy --version
 ```
 
 # Quick commands.
+
 ```bash
+# Lint all files.
+autopep8 --in-place --recursive battery/ engine/ tires/ car.py car_factory.py  serviceable_interface.py
+mypy battery/ engine/ tires/ car.py car_factory.py  serviceable_interface.py
+
 # Check tests.
 python3 -m unittest discover tests
 mypy tests
 autopep8 --in-place --recursive tests/*
+
+# Check batteries.
+autopep8 --in-place --recursive battery/*
+mypy battery
+
+# Check tires.
+autopep8 --in-place --recursive tires/*
+mypy tires
 ```
