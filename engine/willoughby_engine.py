@@ -24,7 +24,7 @@ class WilloughbyEngine(Engine):
         self.current_mileage: int = current_mileage
         self.last_service_mileage: int = last_service_mileage
 
-    def engine_should_be_serviced(self) -> bool:
+    def needs_service(self) -> bool:
         """
         Determines if the Willoughby engine should be serviced.
 
