@@ -7,8 +7,7 @@ class CarriganTires(Tires):
     Represents a Carrigan tires that implements the Tires interface.
 
     Args:
-        current_date (date): The current date.
-        last_service_date (date): The date when the battery was last serviced.
+        tires (List[float]): List of tires wear.
     """
 
     def __init__(self, tires: List[float]) -> None:
