@@ -18,7 +18,7 @@ class SternmanEngine(Engine):
         """
         self.warning_light_is_on: bool = warning_light_is_on
 
-    def engine_should_be_serviced(self) -> bool:
+    def needs_service(self) -> bool:
         """
         Determines if the Sternman engine should be serviced.
 
