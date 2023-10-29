@@ -2,6 +2,13 @@
 
 A software to help manage servicing of cars at Lyft.
 
+# Technologies and Frameworks.
+
+1. Python programming language, annotations in Python.
+1. Test Driven Development (TDD), Unit testing.
+1. Python virtual environment.
+1. Linting; autopep8, pycodestyle.
+
 # Design patterns.
 
 Factory creational design pattern.
@@ -45,16 +52,12 @@ mypy <PYTHON_FILE>
 
 mypy tests/test_engines/test_capulet_engine.py
 
+mypy tests
+
 # Check typing for all files.
 mypy .
 ```
 
-# Technologies and Frameworks.
-
-1. Python programming language, annotations in Python.
-1. Test Driven Development (TDD), Unit testing.
-1. Python virtual environment.
-1. Linting; autopep8, pycodestyle.
 
 # Test Driven Development.
 
@@ -155,4 +158,12 @@ pip install mypy
 
 # Confirm install.
 mypy --version
+```
+
+# Quick commands.
+```bash
+# Check tests.
+python3 -m unittest discover tests
+mypy tests
+autopep8 --in-place --recursive tests/*
 ```
