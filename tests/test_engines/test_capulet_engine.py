@@ -16,9 +16,10 @@ class TestCapuletEngine(unittest.TestCase):
         """
         current_mileage: int = 30001
         last_service_mileage: int = 0
-
         engine: CapuletEngine = CapuletEngine(
-            current_mileage, last_service_mileage)
+            current_mileage, last_service_mileage
+        )
+
         self.assertTrue(engine.needs_service())
 
     def test_engine_should_not_be_serviced(self) -> None:
@@ -30,9 +31,10 @@ class TestCapuletEngine(unittest.TestCase):
         """
         current_mileage: int = 30000
         last_service_mileage: int = 0
-
         engine: CapuletEngine = CapuletEngine(
-            current_mileage, last_service_mileage)
+            current_mileage, last_service_mileage
+        )
+        
         self.assertFalse(engine.needs_service())
 
 
