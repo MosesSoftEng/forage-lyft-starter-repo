@@ -7,8 +7,7 @@ from tires.carrigan_tires import CarriganTires
 class TestCarriganTires(unittest.TestCase):
     def test_tires_should_be_serviced(self) -> None:
         """
-        Test battery should be serviced when difference between current date and last service date is above service
-                limit threshold.
+        Test tires should be serviced when one of tire wears is equal or greater than 0.9.
 
         :param self: The test case instance.
         :return: None
@@ -21,8 +20,7 @@ class TestCarriganTires(unittest.TestCase):
 
     def test_tires_should_not_be_serviced(self) -> None:
         """
-        Test battery should be serviced when difference between current date and last service date is above service
-                limit threshold.
+        Test tires should not be serviced when none of tire wears is equal or greater than 0.9.  
 
         :param self: The test case instance.
         :return: None
