@@ -10,9 +10,9 @@ class SpindlerBattery(Battery):
         current_date (date): The current date.
         last_service_date (date): The date when the battery was last serviced.
     """
-    SERVICE_LIMIT_DAYS = 365 * 2
+    SERVICE_LIMIT_DAYS = 365 * 3
 
-    def __init__(self, current_date: date, last_service_date: date):
+    def __init__(self, current_date: date, last_service_date: date) -> None:
         """
         Initialize a SpindlerBattery object.
 
