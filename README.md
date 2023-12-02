@@ -104,6 +104,8 @@ python3 -m venv --help
 # Create a new virtual environment called venv
 python -m venv venv
 
+python3 -m venv venv
+
 # Activate virtual environment.
 source venv/bin/activate
 
